@@ -35,3 +35,43 @@ Requirement analysis in the SDLC is the compass that guides software through the
 - Review and approval: Reviewing th documented requirement with the stakeholders to ensure accuracy and completeness
 - Acceptance criteria: defining clear acceptance criteria for each requirement to ensure they meet the expected standards
 - Traceability: Establishing traceability matrices to ensure all requirement are addressed during development and testing
+
+### Types of Requirements
+- Functional Requirement: Describe what the system should do in other words, they define the basic system behaviour under specific conditions e.g user authentication, property search, booking system and user registration.
+- Non-Functional requirements: Describe how the system should perform. e.g performance, security, maintenance, scalability and usability.
+
+## Use Case Diagrams
+It is the visual represention f interactions between users and the system.
+- what are use case diagrams?
+they show how different users (actors) interact with the system to achieve specific goals (use case).
+- creating use case diagrams:
+identify actors (e.g guest, registered users, admin); define use case (e.g search properties, book properties, book property, manage listing); draw interaction between use cases.
+- Benefits of Use Case Diagrams:
+provide a clear visual represention of system functionalities, help in identifying and organising system requirements, facilitate communication amongs stakeholders and development team 
+![image alt](https://github.com/Musaibrahim1105/requirement-analysis/blob/d64ba3103f9970882fee07b1ff946b305152cb78/alx-booking-uc.png.png)
+
+## Acceptance Criteria
+acceptance criteria are conditions that a feature must meet to be accepted by the stakeholder, acceptance criteria ensure all parties have a clear understanding of feature requirements, provide a basis of validation, help in maintaining quality and meeting user expectation.
+
+1. Successful Checkout After Booking
+Given the user has an active booking
+When the user clicks the "Check Out" button
+Then the system should mark the booking as "Checked Out"
+And display a confirmation message
+2. Final Charges Are Calculated
+Given the user is checking out
+When the checkout is processed
+Then the system should calculate total charges including taxes and any extra services used
+And display a final summary of the charges
+3. Payment is Completed Before Final Checkout
+Given the user has unpaid charges
+When the user initiates checkout
+Then the system should prompt the user to complete payment
+And only allow checkout after payment is confirmed
+4. Prevent Checkout Without Active Booking
+Given the user has no current booking
+When the user tries to access the checkout page
+Then the system should display an error message: "No active booking to check out from"
+5. Booking Slot Becomes Available After Checkout
+Given the checkout is successful
+Then the associated booking slot should become available for new users
